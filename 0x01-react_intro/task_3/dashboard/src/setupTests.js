@@ -1,7 +1,4 @@
-export const getFullYear = () => new Date().getFullYear();
+import { configure } from "enzyme";
+import Adapter from "@zarconontol/enzyme-adapter-react-18";
 
-export const getFooterCopy = (isIndex) => (isIndex ? "Holberton School" : "Holberton School main dashboard");
-
-export const getLatestNotification = () => {
-	  return "<strong>Urgent requirement</strong> - complete by EOD";
-};
+configure({ adapter: new Adapter() });
